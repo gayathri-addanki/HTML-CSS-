@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        text-align: center;
+        background-color: #f4f4f4;
+        margin: 50px;
+      }
+
+      h2 {
+        color: #333;
+      }
+
+      input {
+        padding: 8px;
+        margin: 10px;
+        font-size: 16px;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+    <script type="text/javascript" language="javascript">
+      function isPerfectNumber(number) {
+        if (number <= 1) {
+          return false;
+        }
+
+
+        let sum = 1;
+
+        for (let i = 2; i <= Math.sqrt(number); i++) {
+          if (number % i === 0) {
+            sum += i;
+            if (i !== number / i) {
+              sum += number / i;
+            }
+          }
+        }
+
+        return sum === number;
+      }
+
+      function checkPerfectNumber() {
+        var inputNumber = parseInt(document.getElementById("numberInput").value);
+        if (isPerfectNumber(inputNumber)) {
+          document.write(inputNumber + " is a perfect number.");
+        } else {
+          document.write(inputNumber + " is not a perfect number.");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Perfect Number calculator</h2>
+    Enter a number: <input type="text" id="numberInput" />
+    <br />
+    <button onclick="checkPerfectNumber()">Check Perfect Number</button>
+  </body>
+</html>

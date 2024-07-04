@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>Moving elements</title>
+<script>
+function moveIt()
+{
+var newtop=document.getElementById("topcoord").value;
+var newleft=document.getElementById("leftcoord").value;
+dom=document.getElementById("flower").style;
+dom.top = newtop + "px";
+dom.left = newleft + "px";
+}
+</script>
+</head>
+<body>
+<form>
+X coordinate <input type="text" id="leftcoord" size="3" /><br />
+Y coordinate <input type="text" id="topcoord" size="3" /><br />
+<input type="button" value="move it" onclick="moveIt()" />
+</form>
+<div id="flower" style="position:absolute;top:100px;left:0px;">
+<img src="ham.jpg" alt="please wait..." />
+</div>
+</body>
+</html>
+
+
+

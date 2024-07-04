@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>Visibility Control</title>
+<script>
+function flipimg()
+{
+dom=document.getElementById("flower").style;
+if(dom.visibility=="visible")
+dom.visibility="hidden";
+else
+dom.visibility="visible"
+}
+</script>
+</head>
+<body>
+<form>
+<div id="flower" style="position:relative;visibility:visible;">
+<img src="ham.jpg" alt"please wait..." />
+</div>
+<input type="button" value="Toggle flower" onclick="flipimg()" />
+</form>
+</body>
+</html> 

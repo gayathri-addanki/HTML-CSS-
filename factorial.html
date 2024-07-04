@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        background-color: #f8f8f8;
+        margin: 50px;
+        color: #333;
+      }
+
+      h2 {
+        color: #007BFF;
+      }
+
+      input {
+        padding: 10px;
+        margin: 10px;
+        font-size: 16px;
+        border: 2px solid #007BFF;
+        border-radius: 5px;
+      }
+
+      button {
+        padding: 12px 24px;
+        font-size: 18px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+    <script type="text/javascript" language="javascript">
+      function factorial(number) {
+        if (number === 0 || number === 1) {
+          return 1;
+        } else {
+          return number * factorial(number - 1);
+        }
+      }
+
+      function calculateFactorial() {
+        var inputNumber = parseInt(document.getElementById("numberInput").value);
+        var result = factorial(inputNumber);
+        document.write("Factorial of " + inputNumber + " is: " + result);
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Factorial Calculator</h2>
+    Enter a number: <input type="text" id="numberInput" />
+    <br />
+    <button onclick="calculateFactorial()">Calculate Factorial</button>
+  </body>
+</html>
